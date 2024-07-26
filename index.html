@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Header Styles */
+    .myHeader {
+      background-color: #f7f7f9;;
+      color: #fff;
+      height: 75px;
+      padding:10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .myHeader .logo {
+  display: block; 
+  margin: 0;
+  text-align: left; 
+}
+
+.myHeader .logo img {
+  width: 150px; 
+  height: auto;
+}
+    
+    /* Breadcrumb Styles */
+    .sBreadCrumb {
+      background-color: white;
+      padding: 10px;
+     
+    }
+    
+    .sBreadCrumb ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .sBreadCrumb li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    
+    .sBreadCrumb a {
+      color: #337ab7;
+      text-decoration: none;
+    }
+    
+    /* Content Styles */
+    .sContent {
+      padding: 20px;
+    }
+    
+    .sContent .headers {
+      margin-bottom: 20px;
+    }
+    
+    .sContent .h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .sContent .h2 {
+      font-size: 18px;
+      color: #666;
+    }
+    
+    /* Sidebar Styles */
+    .sidebar {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    
+    .sidebar .satisfaction {
+      margin-bottom: 20px;
+    }
+    
+    .sidebar .satisfaction .flexWrap {
+      display: flex;
+      align-items: center;
+    }
+    
+    .sidebar .satisfaction svg {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+    }
+    
+    .sidebar .whyChoose {
+      margin-bottom: 20px;
+    }
+    
+    .sidebar .whyChoose .h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .sidebar .whyChoose ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .sidebar .whyChoose li {
+      margin-bottom: 10px;
+    }
+    
+    .h1 {
+  font-size: 31px;
+  font-weight: 400;
+  font-family: GothamProBold, sans-serif;
+  color: #102f50;
+}
+#secure-checkout-heading {
+  font-size: 31px;
+  font-weight: bold;
+  font-family: GothamProBold, sans-serif;
+  color: #102f50;
+}
+    /* Secure Shopping Styles */
+    .secureShopping {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    
+    .secureShopping .h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .secureShopping .cardsWrap {
+      margin-bottom: 20px;
+    }
+    
+    .secureShopping .cardsWrap img {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* Top Button Styles */
+    .topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .topBtn svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+    }
+    .banner {
+     background-image: linear-gradient(to right, #fff01e, #fc771e);
+     color: #fff;
+     padding: 10px 20px;
+     text-align: center;
+     position: relative;
+     margin-bottom: 20px;
+     border-radius: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     }
+
+        .banner .timer {
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .banner .countdown {
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .banner .timer i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-right: 5px;
+            position: relative;
+            top: 2px;
+        }
+
+        .banner .timer i::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #ff9900;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        .banner .timer i::after {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 7.5px;
+        }
+
+        .banner .discount {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .banner .code {
+            font-size: 14px;
+        }
+
+        .banner .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .banner .close:hover {
+            color: #ff0000;
+        }
+
+        @media (max-width: 768px) {
+          .banner {
+            padding: 5px 10px;
+            text-align: left;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            background-image: none;
+            background-color: rgb(252, 96, 122);
+            border: 2px solid palevioletred ;
+          }
+         
+          .banner .timer i {
+            width: 25px;
+            height: 25px;
+           
+          }
+          .timer{
+            text-decoration: underline;
+          }
+          .banner .timer i::before {
+            width: 7px;
+            height: 7px;
+          }
+
+          .banner .timer i::after {
+            width: 3.5px;
+            height: 3.5px;
+           
+          }
+
+          .banner .countdown {
+            display: block;
+            margin-top: 5px;
+          }
+
+          .banner .discount {
+            background-color: yellow;
+            width: 100%;
+  padding: 9px;
+  margin: 0 35px;
+  border-radius: 8px;
+  display: block;
+           
+          }
+
+          .banner .code {
+            font-size: 12px;
+            margin-top: 5px;
+          }
+        }
+  </style>
+
+</head>
+<body>
+  <body>
+    <div class="wrapper">
+        <div class="contentPage">
+            <header class="myHeader onlyLogo">
+                <div class="topLine">
+                    <div class="container">
+                        <a href="/" class="logo"><img src="logo.PNG" alt="Exam-Labs"></a>
+                    </div>
+                </div>
+            </header>
+    
+                    <section class="sBreadCrumb">
+        <div class="container">
+            <ul class="breadCrumb">
+                                                    <li>
+                                                      <a href="/">Home</a>
+                                                    </li>
+                                                    <li>Checkout</li>
+           </ul>
+        </div>
+    </section>        
+            
+    <section class="sContent withMargin">
+        <div class="container">
+            <div class="headers customMargin">
+                <h1 class="h1">Secure One-Step Checkout</h1>
+                <h2 class="h2">Your Product Will Become Available Immediately After Purchase</h2>
+            </div>
+                </div>
+                <div class="banner">
+                  <span class="timer"><i></i>LIMITED TIME OFFER</span>
+                  <span class="countdown">Ends in: <span id="countdown">01:31:01</span></span>
+                  <span class="discount"><span><b>GET 10% OFF</b></span><span> Use Code:<b>EXAMSTART</b></span></span>
+              </div>
+    
+                <div class="sidebar">
+                  <div class="card" style="border: 1px solid #0fc962; background-color: #f5fffa; padding: 20px;">
+                    <div class="satisfaction">
+                      <div class="flexWrap">
+                        <svg width="50" height="50"><use xlink:href=""></use></svg>
+                        <div class="satisfactionHeaders">
+                          <div class="title">Satisfaction Guaranteed</div>
+                          <div><span>98.4%</span>Pass Rate</div>
+                        </div>
+                      </div>
+                      <div>Our team works hard to provide students with high exam practice test questions and compelling learning experiences. We're confident of the quality level of the products we offer and provide no hassle satisfaction guarantee.</div>
+                    </div>
+                  </div>
+                
+                  <div class="card" style="border: 1px solid #0fc962; background-color: #f5fffa; padding: 20px;">
+                    <div class="whyChoose">
+                      <p class="h3">Why choose Exam-Labs?</p>
+                      <div class="subTitle">Over <span>603,296</span><br> Satisfied Customers Since 2015</div>
+                      <ul class="checkList">
+                        <li><span>100%</span> Latest Exam Questions</li>
+                        <li>Accurate & Updated <span>Answers</span></li>
+                        <li>Regular <span>Free</span> Updates</li>
+                        <li><span>24/7</span> Customer Support</li>
+                        <li><span>98.4%</span> Pass Rate</li>
+                        <li><span>Instant</span> Download</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="secureShopping" style="border: 1px solid #0fc962; background-color: #f5fffa; padding: 20px;" >
+                    <p class="h3">Secure Shopping Experience</p>
+                    <div class="subTitle">We provide secure shopping experience backed by High Security SSL from McAfee, so you are guaranteed that any your purchase on Exam-Labs is 100% safe.</div>
+                    <div class="cardsWrap">
+                      <img src="" alt="We accept VISA, MasterCard, Maestro, American Express">
+                    </div>
+                    <p>You will get access to your products immediately after we receive your payment.</p>
+                    <div class="mcafee">
+                      <img src="" alt="McAfee">
+                      <div class="currentDate">
+                        <div class="currentDay"></div>
+                        <div class="currentMonth"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    <script>
+     let countdown = 3661; // 1 hour, 1 minute, and 1 second
+let countdownElement = document.getElementById('countdown');
+
+function updateCountdown() {
+  const hours = Math.floor(countdown / 3600);
+  const minutes = Math.floor((countdown % 3600) / 60);
+  const seconds = countdown % 60;
+
+  const hoursStr = hours.toString().padStart(2, '0');
+  const minutesStr = minutes.toString().padStart(2, '0');
+  const secondsStr = seconds.toString().padStart(2, '0');
+
+  countdownElement.textContent = `${hoursStr}:${minutesStr}:${secondsStr}`;
+}
+
+function startCountdown() {
+  updateCountdown();
+
+  const interval = setInterval(() => {
+    countdown--;
+    updateCountdown();
+
+    if (countdown < 0) {
+      clearInterval(interval);
+      countdown = 3661; // Reset the countdown
+      startCountdown();
+    }
+  }, 1000);
+}
+
+startCountdown();
+  </script>
+</body>
+</html>
